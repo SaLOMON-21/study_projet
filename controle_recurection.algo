@@ -1,0 +1,20 @@
+FUNCTION def is_palindrome(word):
+
+BEGIN
+   //un mot simple ou un mot qui conteint un charactere est un palidrome :
+    if len(word) <= 1:
+        return True
+
+    // comparons les characteres trouver a la fin des mot
+    if word[0] == word[-1]:
+        // Testons recursivelement les cas
+        return is_palindrome(word[1:-1])
+    else:
+        return False
+        
+        write(is_palindrome("gag"));    // Output: True
+        write(is_palindrome("kayak"));  // Output: True
+        write(is_palindrome("php"));    // Output: True
+        write(is_palindrome("radar"));  //Output: True
+        write(is_palindrome("hello"));  // Output: False
+END
